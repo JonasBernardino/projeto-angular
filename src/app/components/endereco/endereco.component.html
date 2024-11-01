@@ -1,0 +1,17 @@
+<input type="text" [(ngModel)]="cep" placeholder="Informe seu cep" name="cep">
+<button (click)="buscaEndereco()">Buscar</button>
+
+<h1 *ngIf="endereco | async as endereco">
+  <strong>CEP:</strong> {{ endereco.cep }}<br>
+  <strong>Logradouro:</strong> {{ endereco.logradouro }}<br>
+  <strong>Complemento:</strong> {{ endereco.complemento }}<br>
+  <strong>Bairro:</strong> {{ endereco.bairro }}<br>
+  <strong>Localidade:</strong> {{ endereco.localidade }}<br>
+  <strong>UF:</strong> {{ endereco.uf }}<br>
+  <strong>Estado:</strong> {{ endereco.estado }}<br>
+  <strong>Região:</strong> {{ endereco.regiao }}<br>
+  <strong>IBGE:</strong> {{ endereco.ibge }}<br>
+  <strong>GIA:</strong> {{ endereco.gia }}<br>
+  <strong>DDD:</strong> {{ endereco.ddd }}<br>
+  <strong>SIAFI:</strong> {{ endereco.siafi }}
+</h1>
